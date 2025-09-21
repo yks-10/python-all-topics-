@@ -1,3 +1,8 @@
+'''
+Beginner (Foundations)
+'''
+
+
 # 1. Variables & data type
 
 roll_no = 12        # int
@@ -181,3 +186,83 @@ finally:
     print("Yey")
 
 
+'''
+Intermediate (Core Programming)
+'''
+
+# List comprehension
+x =  [i for i in range(10)]
+
+# set comprehension
+y = {i for i in "maddy"}
+
+#dictonary
+d = {'a':62,'b':63,'c':64}
+d = {j:i for i, j in d.items()}
+print(d)
+
+# Nested DS
+
+# list of list
+x = [[1,2,3,4,5],[1,2,3,4,5],[1,2,3,4,5]]
+
+# list of dict
+x =[{'a':1,'b':2,'c':3},{'a':4,'b':5,'c':6},{'a':7,'b':8,'c':9}]
+
+# dict of list
+x = {"roll_no":[1,2,3,4], "name":["yks","yogesh","krishnan"]}
+
+
+
+# Function
+
+# recursion function calls itself until reaches it base condition
+def add(n):
+    if n==0:
+        return 0
+    else:
+        return add(n-1)
+
+print(add(10))
+
+# *args
+def display(*numbers):
+    for i in numbers:
+        print(i)
+    return sum(numbers)
+print(display(1,2,3))
+
+# **kwargs
+def func_kwargs(**kwargs):
+    x = kwargs['x']
+    y =  kwargs['y']
+    return x+y
+print(func_kwargs(x=100, y=200))
+
+# lambda function
+increment = lambda x: x+1
+result = increment(1000)
+print(result)
+
+
+#  map applies for all iter
+nums =[1,2,3]
+x = list(map(lambda x: x**2, nums))
+print(x)
+
+# filters the values based on condition
+nums = [1,2,3,4,5,6,7]
+x = list(filter(lambda x: x%2==0, nums))
+print(x)
+
+# reduces
+'''
+    function from functools
+    accept 2 args 
+    (a iter, 1 optional may be intial value )
+    return single value output 
+'''
+from functools import reduce
+nums = [1,2]
+x = reduce(lambda a,b: a+b, nums)
+print(x)
