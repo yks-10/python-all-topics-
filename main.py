@@ -278,3 +278,98 @@ print("heelo {}".format("hello"))
 
 
 
+with open("yes.txt", 'r') as file:
+    text = file.read()
+    file.seek(0)
+
+    text = file.readlines()
+    for line in text:
+        print(line)
+
+
+# OS
+import os
+
+cwd = os.getcwd()
+print(os.getcwd())
+print(os.getcwd())
+path = os.path.join(cwd,'yes.txt')
+print(os.path.basename(path))
+print(os.path.dirname(path))
+print(os.path.getsize(path))
+print(os.path.isfile(path))
+print(os.path.isdir(path))
+print(os.stat(path))
+print(os.access(path, os.W_OK))
+print(os.path.exists(path))
+
+
+
+# pathlib
+
+print('pathlib')
+
+from pathlib import Path
+
+cwd = Path(path)
+print(path)
+
+# Modules & Packages
+'''
+    module | single python(.py) file with reusable code 
+    package | folder with __init__ and multiple module 
+'''
+
+# custom package
+'''
+    pyproject.toml | setuptools , wheel 
+    setup.py | setup( name , version, desc, author, 
+        packages, install_requirements , python_required )
+'''
+
+# virtual env python -m venv venv
+
+# Exception Handling
+
+try:
+    x = 12/2
+except TypeError as e:
+    print("type error", e)
+except ZeroDivisionError as e:
+    print("division by zero")
+else:
+    print("Result",x)
+finally:
+    print("error handling")
+
+
+try:
+    x = 0/0
+except (TypeError, ZeroDivisionError) as e:
+    print(e)
+
+
+# custom exception
+
+class EnaError(Exception):
+    pass
+
+def validation(x):
+    if not isinstance(x, int):
+        raise EnaError("x must be an integer")
+    return x
+
+def add(a):
+    try:
+        return 1+validation(a)
+    except EnaError as e:
+        print(e)
+print(add("1"))
+
+
+# chain exception
+try:
+    int("abc")
+except ValueError as e:
+    raise RuntimeError("coverstion failed") from e
+
