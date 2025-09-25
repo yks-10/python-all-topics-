@@ -266,3 +266,15 @@ from functools import reduce
 nums = [1,2]
 x = reduce(lambda a,b: a+b, nums)
 print(x)
+
+
+# string manipulation: slicing, formating, regex
+text = "yks"
+print(text[0:1])
+
+# formating
+print(f"text {x}", 10)
+print("heelo {}".format("hello"))
+
+
+
