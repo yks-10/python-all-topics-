@@ -7,7 +7,7 @@
     wb : write binary mode
     ab : append binary mode
 '''
-from main import text
+from yes1 import text
 
 with open("yes.txt", "r") as file: # with is context manager
     content = file.read()

@@ -16,3 +16,6 @@ def prime_generator(nums):
 nums = [2, 4, 5, 6, 7, 8, 11]
 for num in prime_generator(nums):
     print(num)
+
+
+
