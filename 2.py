@@ -106,7 +106,7 @@ print(next(counter))
 
 # context manger
 '''
-is a object defines what happen at beginning and of the with 
+is a object defines what happen at beginning and end of the with 
 ensure setup and cleanup operations automatically even error occurs 
 __entry__(self) 
 __exit__(self, exc_type, exc_value, exc_traceback)
