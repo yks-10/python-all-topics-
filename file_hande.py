@@ -1,12 +1,43 @@
 '''
     r : read
     w : write
+    x : craete file
     a : append
     r+ : read & write
     rb : read binary mode
     wb : write binary mode
     ab : append binary mode
 '''
+
+import json 
+def file_check(path):
+  if not path.endswith('.json'):
+    raise TypeError("Json file only accepted")
+    
+  try:
+    with open(path, 'r') as file:
+      content = file.read.strip()
+      if not content:
+        raise ValueError("Empty File")
+      data = json.load(content)
+      return content 
+  except FileNotFoundErr:
+    print("file not found")
+  except json.JSONDecodeError:
+    print("json format ")
+  except Exception as e:
+    print("Unexpected error")
+    
+    
+  if not path.endswith(".json"):
+    raise TypeError("")
+    
+  with open('test.text', 'r') as file:
+    content = file.read.strip()
+    if not content:
+      raise ValueError("Empty File")
+    
+    
 from yes1 import text
 
 with open("yes.txt", "r") as file: # with is context manager

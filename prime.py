@@ -18,4 +18,22 @@ for num in prime_generator(nums):
     print(num)
 
 
+print("USing Iter")
 
+class Range:
+    def __init__(self, start, end):
+        self.start = start 
+        self.end = end 
+
+    def __iter__(self):
+        return self
+
+    def __next__(self):
+        if self.start > self.end:
+            raise StopIteration 
+        val = self.start 
+        self.start += 1 
+        return val 
+
+for i in Range(9,10):
+    print(i)
