@@ -1,0 +1,33 @@
+from abc import ABC, abstractmethod
+class Employee(ABC):
+    def __init__(self, name, id, department, salary):
+        self.name = name 
+        self.id = id 
+        self.department = department 
+        self.salary = salary 
+    
+    @abstractmethod
+    def calcualte_salary(self, employee_id, salary):
+        pass
+
+class FullTimeEmployees(Employee):
+    def __init__(self):
+        super().__init__(name, id, department, salary)
+
+    def calcualate_salary(self, employee_id, salaray):
+        pass
+    
+class PartTimeEmployees(Employee):
+    def __init__(self):
+        super().__init__(name, id, department, salary)
+
+     def calcualate_salary(self, employee_id, salaray):
+        pass
+  
+class InterTimeEmployees(Employee):
+    def __init__(self):
+        super().__init__(name, id, department, salary)
+
+     def calcualate_salary(self, employee_id, salaray):
+        pass
+  

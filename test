@@ -1,0 +1,43 @@
+@receiver(post_save, sender=Student)
+def signal_name(sender, instance, created, **kwargs):
+
+
+@receiver(m2m_changed, sender=RequestService.care_team.through)
+def signal_name(sender, instance, action, pk_set, **kwargs):
+    if action=="post_add"
+
+
+
+def ready(self):
+    import app_name.signals
+
+path("", views.api_name.as_views(), name="api-naame")
+
+class Student(models.Model):
+    name = models.CharField()
+    BooleanField
+    PositiveIntegerFIeld 
+
+
+    class Meta:
+        db_table
+        verbose_name 
+        verbose_name_plural
+        ordering 
+        indexes = [
+            models.Index(fields=['created_At'], name="request_created_at")
+        ]
+        indexes = [
+            models.Index(fields=['id','name'], name=["id_name_idx"]),
+        ]
+
+class StudentAdmin(admin.ModelAdmin):
+    model = 
+    list_diaply
+    search_fields
+    list_filter
+    ordering 
+
+
+MiddlewareMixin:
+process_request
