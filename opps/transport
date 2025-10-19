@@ -1,0 +1,43 @@
+from abc import ABC, abstractmethod
+class Vechicle(ABC):
+    def __init__(self, number, capacity, destination):
+        self.number = number 
+        self.capacity = capascity
+        self.destination = destination 
+
+    @abstractmethod 
+    def route_info(self):
+        pass 
+
+class Buse(Vechicle):
+    def __init__(self, name, capcity, destination, route):
+        super().__init__(name, capcity, destination)
+        self.route = route
+
+    def route_info(self):
+        pass
+
+class Train(Vechicle):
+    def __init__(self, name, capcity, destination, route):
+        super().__init__(name, capcity, destination)
+        self.route = route
+
+    def route_info(self):
+        pass
+
+class Flight(Vechicle):
+    def __init__(self, name, capcity, destination, route):
+        super().__init__(name, capcity, destination)
+        self.route = route
+
+    def route_info(self):
+        pass
+
+x = [
+    Bus("nalamani", 50, "nilakottai", "KODI-NILAVAI"),
+    Train("pandiyan", 2000, "madurai", "CHE-MDU"),
+    Flight("sky", 400, "chennai", "CBE-CHE")
+]
+
+for i in x:
+    print(i.route_info())
