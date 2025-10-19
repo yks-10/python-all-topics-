@@ -31,3 +31,29 @@ class InterTimeEmployees(Employee):
      def calcualate_salary(self, employee_id, salaray):
         pass
   
+
+
+
+class Employee:
+    def __init__(self, name, id, salary, position):
+        self.name = name 
+        self.id = id 
+        self.salary = salary 
+        self.position = position 
+
+class EmployeeManagement(Employee):
+    def __init__(self, name,id,salary, position):
+        super().__init__(name, id, salary, position)
+        self.team = []
+
+    def add_employee(self, name, id, salary, position):
+        pass 
+
+    def remove_employee(self):
+        pass 
+
+    def display_emp(self, manager_id):
+        pass
+
+    def calculate_salary(self, manager_id):
+        pass
