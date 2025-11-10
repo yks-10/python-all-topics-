@@ -1,0 +1,22 @@
+Operators:
+symbols - perform - operations - on - variables and value
+
+Arithmetic Operators:
+Maths - operations [ +, -, *, /, //, %, ** ]
+
+Comparison Operators:
+Compare - values  [ == , != , > , < , >=, <=]
+
+Logical Operators:
+combine - conditional - statement [ and, or, not ]
+
+Assignment Operators:
+assign - value [ =, +=, -=, *=, /=, %= ]
+
+Identity Operators:
+compare - memory-location [ is, is not ]
+
+membership Operators: ( checks by for loop)
+check - values - exist - in- sequence  [ in, not in]
+
+

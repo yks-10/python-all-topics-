@@ -1,0 +1,22 @@
+Input & Output:
+handle - user - interaction
+how - to - take -input - display - output
+
+
+Output Formatting:
+using - fstrings        | print(f"my name is {name}")
+.format()               | print().format(name)
+string concatenation    | print("my name" +a)
+"sep" - seperator       | print("Python", "is", "Greet", sep="-")
+"end" - end of line     | print("Hello ", end="")
+
+
+Input Function:
+input()         | takes - input - as string
+int(input())    |
+float(input())
+
+Escape Sequence:
+used - format - strings
+\n - newline | \t tab_space | \\ backslash | \' single quote
+

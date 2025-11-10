@@ -1,0 +1,25 @@
+Variable: x= 10
+name - stores - value - in - memory
+no - type - declaration- required
+int - float - string - boolean - complex - NoneType
+
+
+Variable Rules:
+start - with - letter - or - underscore
+no - number - at - start
+case-sensitive
+letter -  number - underscore
+keyword avoid
+
+
+TypeCasting:
+converting - b/w - datatypes
+int to float
+
+DataType Check:
+type() - check - value - datatype
+
+Multiple Assignment:
+x, y = 10, 20
+x, y = 100
+

@@ -1,0 +1,16 @@
+python --version
+python3 --version
+
+Python:
+High level - interpreted
+easy to read - write - maintain
+web development - datascience - Ai - automation
+
+Execution:
+Interpreter - reads - line by line
+compiles - internally - into -bytecode
+Python Virtual Machine - executes - bytecode
+"dis" - module - get - dissemble - python-code
+
+
+comments : single - multiline
