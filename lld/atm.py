@@ -41,7 +41,7 @@ class AccountManagment:
 class AccountStatus:
     def __init__(self, account, status):
         self.account = account 
-        self.__status = sattus
+        self.__status = status
 
     @property
     def status(self):
