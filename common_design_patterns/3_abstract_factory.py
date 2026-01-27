@@ -42,30 +42,32 @@ class PaymentFactory(ABC):
 #conceret factories 
 class UPIFactory(PaymentFactory):
     def create_payment(self) -> Payment:
-        return UPIPayment 
+        return UPIPayment() 
 
     def create_receipt(self) -> Receipt:
-        return UPIReceipt 
+        return UPIReceipt() 
 
 class CardFactory(PaymentFactory):
     def create_payment(self) -> Payment:
-        return CardPayment
+        return CardPayment()
 
     def create_receipt(self) -> Receipt:
-        return CardReceipt
+        return CardRecipt()
 
 
 def process_payment(factory: PaymentFactory, amount: float) -> None:
     payment = factory.create_payment()
     receipt = factory.create_receipt()
 
-    payment.pay(amount)
-    receipt.generate(amount)
+    print(payment.pay(amount))
+    print(receipt.generate(amount))
 
 
 if __name__ == '__main__':
-    choice = input("")
-    amount = int(input())
+    # choice = input("")
+    # amount = int(input())
+    choice = "UPI"
+    amount = 3
 
     if choice == "UPI":
         factory = UPIFactory()
